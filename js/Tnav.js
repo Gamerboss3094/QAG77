@@ -5,6 +5,6 @@ document.addEventListener('click', function(e) {
   var isBtn = elem.classList.contains("Tbtn");
   var isAct = elem.classList.contains("Tact");
   if(isBtn === true && isAct === false) {
-    embed.src = elem.url;
+    embed.src = elem.name;
   }
 });
