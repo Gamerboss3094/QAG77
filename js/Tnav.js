@@ -4,5 +4,7 @@ document.addEventListener('click', function(e) {
   var elem = e.target;
   var isBtn = elem.classList.contains("Tbtn");
   var isAct = elem.classList.contains("Tact");
-  alert(isBtn + " " + isAct);
+  if(isBtn === true && isAct === false) {
+    alert("This button is inactive")
+  }
 });
