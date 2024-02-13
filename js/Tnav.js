@@ -1,6 +1,6 @@
 var embed = document.getElementById("embed");
-var buttons = document.getElementsByClassName('Tbut');
 
-buttons.onclick = function(e) {
-  alert(this.innerText);
-}
+document.addEventListener('click', function(evt) {
+  let element = evt.target;
+  console.log(`${element.textContent}`);
+});
