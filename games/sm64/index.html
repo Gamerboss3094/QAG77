@@ -21,7 +21,34 @@
         <section class="content">
           <div class="content-container">
             <canvas class="emscripten" id="canvas" style="width: 900px; height: 506.25px"></canvas>
-            <script type='text/javascript' src="./js/canv.js"></script>
+            <script type='text/javascript'>
+              var Module = {
+                preRun: [],
+                postRun: [],
+                print: (function() {
+                  return function(text) {
+                    if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+                    console.log(text);
+                  };
+                })(),
+                printErr: function(text) {
+                  if (arguments.length > 1)
+                    text = Array.prototype.slice.call(arguments).join(' ');
+                  console.error(text);
+                },
+                canvas: (function() {
+                  var canvas = document.getElementById('canvas');
+                  canvas.width = window.innerWidth;
+                  canvas.height = window.innerHeight;
+                  canvas.addEventListener("webglcontextlost", function (e) {
+                    alert('WebGL context lost. You will need to reload the page.');
+                    e.preventDefault();
+                  }, false);
+                  return canvas;
+                })(),
+                setStatus: function(text) { }
+              };
+            </script>
             <script async type="text/javascript" src="./lib/sm64.us.f3dex2e.js"></script>
             <div class="bar">
               <div class="bar-left">
