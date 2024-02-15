@@ -12,7 +12,7 @@ document.addEventListener('click', function(e) {
   var isBtn = elem.classList.contains('Tbtn');
   var isAct = elem.classList.contains('Tact');
   if(isBtn && !isAct) {
-    embed.src = elem.name;
+    embed.src = elem.href;
     enable(elem);
   }
 });
