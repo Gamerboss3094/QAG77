@@ -1,5 +1,5 @@
 var hackMenu = document.createElement('span');
-hackMenu.id = "hack-menu";
+hackMenu.setAttribute('id','hack-menu');
 hackMenu.classList.add('hide');
 document.body.appendChild(hackMenu);
 const hackUI = [];
