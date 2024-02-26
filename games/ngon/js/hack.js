@@ -1,7 +1,4 @@
-var hackMenu = document.createElement('span');
-hackMenu.classList.add('hack-menu');
-hackMenu.classList.add('hide');
-document.body.appendChild(hackMenu);
+var hackMenu = document.getElementById('hack-menu');
 const hackUI = [];
 hackUI[0] = '<a class="h3">Hacks</a><p style="margin-bottom: 5px; margin-top: 4px;"><button onclick="setUI(1)">Level</button><button onclick="setUI(2)">Mob</button><button onclick = "setUI(3)">Movement</button></p><p style="margin-top: 5px; margin-bottom: 5px;"><button onclick="setUI(4);">Physics</button><button onclick="setUI(5);">Player</button><button onclick="setUI(6);">Tech</button></p><p style="margin-top: 5px; margin-bottom: 0px;"><button onclick="lore.unlockTesting();">Enable Test Mode</button></p>'
 hackUI[1] = '<a class="h3">Level Hacks</a><p style="margin-bottom: 5px; margin-top: 4px;"><button onclick="for(let i = 0;i<7;i++){tech.giveTech(`undefined`)};for(let i = 0;i<100;i++){tech.giveTech(`missile-bot`)};for(let i = 0; i<13;i++){level.nextLevel()}">Lore</button><button onclick="level.nextLevel();">Next Level</button></p><p style="margin-top: 5px; margin-bottom: 0px;"><button onclick="setUI(0);">&lt; Back</button></p>';
