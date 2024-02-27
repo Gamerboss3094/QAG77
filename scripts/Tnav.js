@@ -1,5 +1,4 @@
 var embed = document.getElementById('embed');
-var favicon = document.getElementById('favicon');
 
 function enable(elem) {
   [...document.getElementsByClassName('Tact')].forEach(x => {
@@ -13,8 +12,8 @@ document.addEventListener('click', function(e) {
   var isBtn = elem.classList.contains('Tbtn');
   var isAct = elem.classList.contains('Tact');
   if(isBtn && !isAct) {
-    embed.src = elem.dataset.url;
-    favicon.href = elem.dataset.fav;
+    $("#embed").attr("src",elem.dataset.url);
+    $("#favicon").attr("href","img/favicons/favicon.ico");
     enable(elem);
   }
 });
