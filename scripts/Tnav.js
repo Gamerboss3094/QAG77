@@ -12,8 +12,7 @@ document.addEventListener('click', function(e) {
   var isBtn = elem.classList.contains('Tbtn');
   var isAct = elem.classList.contains('Tact');
   if(isBtn && !isAct) {
-    $("#embed").attr("src",elem.dataset.url);
-    $("#favicon").attr("href","img/favicons/favicon.ico");
+    embed.src = elem.dataset.url;
     enable(elem);
   }
 });
