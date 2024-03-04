@@ -12,6 +12,7 @@ body {
   font-size: 17px;
   width: 30px;
   height: 30px;
+  float: right;
 }
 
 #embedArea {
@@ -20,7 +21,7 @@ body {
   border: none;
   overflow: hidden;
   display: inline-block;
-  text-align: right;
+  text-align: center;
 }
 
 #embedBar {
