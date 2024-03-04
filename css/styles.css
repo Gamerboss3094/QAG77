@@ -21,7 +21,6 @@ body {
   border: none;
   overflow: hidden;
   display: inline-block;
-  text-align: center;
 }
 
 #embedBar {
@@ -33,8 +32,6 @@ body {
   padding-bottom: 0px;
   padding-right: 4px;
   padding-left: 4px;
-  display: inline-block;
-  height: 38px;
 }
 
 #embed {
