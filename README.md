@@ -1,9 +1,10 @@
-# gamerboss3094.github.io (blocked)
-A page that contains unblocked duplicates of old games that were blocked by the Securly chrome extension
-[Website (Blocked, discontinued)](https://gamerboss3094.github.io)
-[Repository](https://github.com/Gamerboss3094v2/gamerboss3094v2.github.io)
-
-# gamerboss3094v2.github.io (unblocked)
-The first unblocked copy of my games website, [gamerboss3094.github.io](https://gamerboss3094.github.io)
-[Website](https://gamerboss3094v2.github.io)
-[Repository](https://github.com/Gamerboss3094v2/gamerboss3094v2.github.io)
+# QAG77
+This is a games website containing unblocked copies of web-based games.
+## How to use
+Since this website is not hosted as a github page, you must follow these instructions to use it:
+**Step 1:** Go to the (releases)[https://github.com/Gamerboss3094/QAG77/releases]
+**Step 2:** Download the latest release
+**Step 3:** Extract QAG77.zip*
+**Step 4:** Open the extracted folder
+**Step 5:** Open index.html
+The page will check for new releases every time you start it. If there is a new release, you will be asked to update the webpage.
