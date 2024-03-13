@@ -19,59 +19,62 @@ const level = {
             // simulation.enableConstructMode() //tech.giveTech('motion sickness')  //used to build maps in testing mode
             // simulation.isHorizontalFlipped = true
             // tech.giveTech("performance")
-            // level.difficultyIncrease(8 * 2) //30 is near max on hard  //60 is near max on why
-            // m.maxHealth = m.health = 1
+            // level.difficultyIncrease(7 * 2) //30 is near max on hard  //60 is near max on why
+            // m.maxHealth = m.health = 1//00000000
             // m.maxEnergy = m.energy = 10000000
             // tech.isRerollDamage = true
             // powerUps.research.changeRerolls(99999)
             // m.immuneCycle = Infinity //you can't take damage
             // tech.tech[297].frequency = 100
             // m.couplingChange(10)
-            // m.setField("metamaterial cloaking") //1 standing wave  2 perfect diamagnetism  3 negative mass  4 molecular assembler  5 plasma torch  6 time dilation  7 metamaterial cloaking  8 pilot wave  9 wormhole 10 grappling hook
+            // m.setField("plasma torch") //1 standing wave  2 perfect diamagnetism  3 negative mass  4 molecular assembler  5 plasma torch  6 time dilation  7 metamaterial cloaking  8 pilot wave  9 wormhole 10 grappling hook
             // m.energy = 0
             // tech.isHookWire = true
             // m.energy = 0
             // simulation.molecularMode = 2
             // m.damage(0.1);
-            // b.giveGuns("super balls") //0 nail gun  1 shotgun  2 super balls 3 wave 4 missiles 5 grenades  6 spores  7 drones  8 foam  9 harpoon  10 mine  11 laser
+            // b.giveGuns("mine") //0 nail gun  1 shotgun  2 super balls 3 wave 4 missiles 5 grenades  6 spores  7 drones  8 foam  9 harpoon  10 mine  11 laser
             // b.giveGuns("laser") //0 nail gun  1 shotgun  2 super balls 3 wave 4 missiles 5 grenades  6 spores  7 drones  8 foam  9 harpoon  10 mine  11 laser
             // b.guns[8].ammo = 100000000
-            // requestAnimationFrame(() => { tech.giveTech("Higgs mechanism") });
-            // for (let i = 0; i < 1; ++i) tech.giveTech("optical amplifier")
-            // for (let i = 0; i < 1; ++i) tech.giveTech("depolarization")
-            // for (let i = 0; i < 1; ++i) tech.giveTech("mass production")
-            // requestAnimationFrame(() => { for (let i = 0; i < 10; i++) tech.giveTech("orbital-bot") });
+            // requestAnimationFrame(() => { tech.giveTech("eternalism") });
+            // for (let i = 0; i < 1; ++i) tech.giveTech("beforeunload")
+            // for (let i = 0; i < 1; ++i) tech.giveTech("Sleipnir")
+            // for (let i = 0; i < 1; ++i) tech.giveTech("dark patterns")
+            // requestAnimationFrame(() => { for (let i = 0; i < 1; i++) tech.giveTech("paradigm shift") });
             // requestAnimationFrame(() => { for (let i = 0; i < 10; i++) b.orbitBot(m.pos, false) });
             // m.skin.hexagon();
-
             // for (let i = 0; i < 1; i++) tech.giveTech("tungsten carbide")
             // m.lastKillCycle = m.cycle
-            // for (let i = 0; i < 1; ++i) tech.giveTech("depolarization")
-            // for (let i = 0; i < 1; ++i) tech.giveTech("CPT symmetry")
+            // for (let i = 0; i < 1; ++i) tech.giveTech("what the block?")
+            // for (let i = 0; i < 1; ++i) tech.giveTech("unified field theory")
             // for (let i = 0; i < 3; i++) powerUps.directSpawn(450, -50, "tech");
             // for (let i = 0; i < 10; i++) powerUps.directSpawn(1750, -500, "research");
             // for (let i = 0; i < 100; i++) powerUps.directSpawn(1750, -500, "coupling");
-            // level.arena();
+            // spawn.mapRect(575, -700, 25, 425);  //block mob line of site on testing
+            // level.testChamber();
 
-            // for (let i = 0; i < 4; ++i) spawn.hopMother(1900, -500)
-            // for (let i = 0; i < 4; ++i) spawn.stinger(1900, -500)
-            // for (let i = 0; i < 1; ++i) spawn.timeSkipBoss(1900, -2500)
+            // for (let i = 0; i < 1; ++i) spawn.laserLayer(1400, -500)
+            // Matter.Body.setPosition(player, { x: -200, y: -3330 });
+            // for (let i = 0; i < 4; ++i) spawn.laserLayer(1300, -500 + 100 * Math.random())
+            // for (let i = 0; i < 1; ++i) spawn.laserLayerBoss(1900, -500)
+            // for (let i = 0; i < 1; ++i) spawn.dragonFlyBoss(1900, -500)
             // spawn.beetleBoss(1900, -500, 25)
-            // spawn.slasher2(2000, -1150)
             // spawn.zombie(-3000, -500 + 300 * Math.random(), 30, 5, "white") // zombie(x, y, radius, sides, color)
             // for (let i = 0; i < 5; ++i) spawn.starter(1000 + 1000 * Math.random(), -500 + 300 * Math.random())
             // tech.addJunkTechToPool(2)
             // tech.tech[322].frequency = 100
             // spawn.tetherBoss(1900, -500, { x: 1900, y: -500 })
             // for (let i = 0; i < 40; ++i) tech.giveTech()
+
             level[simulation.isTraining ? "walk" : "initial"]() //normal starting level **************************************************
 
+            // for (let i = 0; i < 2; i++) spawn.ghoster(1300, -500) //ghosters need to spawn after the map loads
             // spawn.bodyRect(2425, -120, 200, 200);
             // console.log(body[body.length - 1].mass)
             // simulation.isAutoZoom = false; //look in close
             // simulation.zoomScale *= 0.5;
             // simulation.setZoom();
-            // for (let i = 0; i < 2; ++i) powerUps.directSpawn(m.pos.x + 50 * Math.random(), m.pos.y + 50 * Math.random(), "tech");
+            // for (let i = 0; i < 10; ++i) powerUps.directSpawn(m.pos.x + 50 * Math.random(), m.pos.y + 50 * Math.random(), "tech");
             // for (let i = 0; i < 2; ++i) powerUps.directSpawn(m.pos.x + 450, m.pos.y + 50 * Math.random(), "boost");
             // for (let i = 0; i < 20; ++i) powerUps.directSpawn(m.pos.x + 50 * Math.random(), m.pos.y + 50 * Math.random(), "heal");
             // for (let i = 0; i < 2; i++) powerUps.spawn(player.position.x + Math.random() * 50, player.position.y - Math.random() * 50, "field", false);
@@ -289,8 +292,8 @@ const level = {
             simulation.updateTechHUD();
             simulation.clearNow = true; //triggers in simulation.clearMap to remove all physics bodies and setup for new map
 
-            //pop up new level info screen for a few seconds
-            if (!localSettings.isHideHUD && !simulation.isChoosing && !simulation.isCheating && m.alive && (level.levels[level.onLevel] === "final" || level.levels[level.onLevel] === "reactor" || level.levels[level.onLevel] === "subway")) {
+            //pop up new level info screen for a few seconds    //|| level.levels[level.onLevel] === "subway"
+            if (!localSettings.isHideHUD && !simulation.isCheating && m.alive && (level.levels[level.onLevel] === "final" || level.levels[level.onLevel] === "reactor")) {
                 //pause
                 if (!simulation.paused) {
                     simulation.paused = true;
@@ -325,7 +328,7 @@ const level = {
                 simulation.draw.cons();
                 simulation.draw.body();
                 level.customTopLayer();
-                let count = countMax = simulation.testing ? 0 : 180
+                let count = countMax = simulation.testing ? 0 : 240
                 let newLevelDraw = () => {
                     count--
                     if (count > 0) {
@@ -346,40 +349,46 @@ const level = {
                     simulation.wipe();
                     m.look();
                     simulation.camera();
-                    // if (count < 30) {
-                    // }
-                    // if (count < 60) {
-                    //     simulation.draw.cons();
-                    //     simulation.draw.body();
-                    //     level.customTopLayer();
-                    //     simulation.draw.body();
-                    //     simulation.draw.drawMapPath();
-                    //     mobs.draw();
-                    // } else
-                    // if (count < 240) {
-
-                    // ctx.lineDashOffset = 900 * Math.random()
-                    // ctx.setLineDash([3, -8 + 0.5 * count]);
-
-                    const scale = 10
+                    const scale = 15
                     ctx.setLineDash([scale * (countMax - count), scale * count]);
                     simulation.draw.wireFrame();
                     ctx.setLineDash([]);
-
-
-                    // }
-                    // else if (count === 91) { //hide text boss
-                    //     document.getElementById("choose-grid").style.opacity = "0"
-                    //     setTimeout(() => {
-                    //         document.getElementById("choose-grid").style.visibility = "hidden"
-                    //     }, 1000);
-                    // }
                     ctx.restore();
                     simulation.drawCursor();
                 }
                 requestAnimationFrame(newLevelDraw);
-
             }
+            // else {
+            //     //pause
+            //     if (!simulation.paused) {
+            //         simulation.paused = true;
+            //         simulation.isChoosing = true; //stops p from un pausing on key down
+            //     }
+            //     let count = countMax = simulation.testing ? 0 : 60
+            //     let newLevelDraw = () => {
+            //         count--
+            //         if (count > 0) {
+            //             requestAnimationFrame(newLevelDraw);
+            //         } else { //unpause
+            //             // if (m.immuneCycle < m.cycle + 15) m.immuneCycle = m.cycle + 30; //player is immune to damage for 30 cycles
+            //             if (simulation.paused) requestAnimationFrame(cycle);
+            //             if (m.alive) simulation.paused = false;
+            //             simulation.isChoosing = false; //stops p from un pausing on key down
+            //             build.unPauseGrid()
+            //         }
+            //         //draw
+            //         simulation.wipe();
+            //         m.look();
+            //         simulation.camera();
+            //         const scale = 30
+            //         ctx.setLineDash([scale * (countMax - count), scale * count]);
+            //         simulation.draw.wireFrame();
+            //         ctx.setLineDash([]);
+            //         ctx.restore();
+            //         simulation.drawCursor();
+            //     }
+            //     requestAnimationFrame(newLevelDraw);
+            // }
         }
     },
     unPause() {
@@ -1560,7 +1569,6 @@ const level = {
                     }
                 }
             }
-            // if (body.length) {
             for (let i = 0, len = body.length; i < len; i++) {
                 if (body[i] !== m.holdingTarget) {
                     // body[i].bounds.max.x - body[i].bounds.min.x < 100 && body[i].bounds.max.y - body[i].bounds.min.y < 100
@@ -1581,17 +1589,20 @@ const level = {
                         }
                         //rotate velocity
                         let mag
-                        if (this.portalPair.angle !== 0 && this.portalPair.angle !== Math.PI) { //portal that fires the player up
+                        if (this.portalPair.angle !== 0 && this.portalPair.angle !== Math.PI) { //portal that fires up
                             mag = Math.max(10, Math.min(50, body[i].velocity.y * 0.8)) + 11
+                            let v = Vector.mult(this.portalPair.unit, mag)
+                            //rotate the velocity vector of blocks fired directly up to keep them from getting stuck endlessly in vertical portals
+                            Matter.Body.setVelocity(body[i], Vector.rotate(v, 0.5 * (Math.random() - 0.5)));
                         } else {
                             mag = Math.max(6, Math.min(50, Vector.magnitude(body[i].velocity)))
+                            let v = Vector.mult(this.portalPair.unit, mag)
+                            Matter.Body.setVelocity(body[i], v);
                         }
-                        let v = Vector.mult(this.portalPair.unit, mag)
-                        Matter.Body.setVelocity(body[i], v);
+
                     }
                 }
             }
-            // }
 
             //remove block if touching
             // if (body.length) {
@@ -4986,10 +4997,7 @@ const level = {
                     powerUps.directSpawn(x + 998, y - 333, "tech", false);
                 }
                 const powerUp1 = powerUp[powerUp.length - 1]
-                powerUp1.holdPosition = {
-                    x: powerUp1.position.x,
-                    y: powerUp1.position.y
-                }
+                powerUp1.holdPosition = { x: powerUp1.position.x, y: powerUp1.position.y }
                 let isSpawnedMobs = false
                 doCustom.push(
                     () => {
@@ -5004,9 +5012,23 @@ const level = {
                             if (Vector.magnitudeSquared(Vector.sub(m.pos, powerUp1.position)) < 90000) { //zone radius is 300
                                 //damage player and drain energy
                                 if (m.immuneCycle < m.cycle) {
-                                    m.damage(0.01);
-                                    if (m.energy > 0.1) m.energy -= 0.02
+                                    if (m.energy < 0.02) {
+                                        //push out
+                                        // const force = Vector.mult(Vector.normalise(Vector.sub(player.position, powerUp1.position)), 0.02 * player.mass)
+                                        // player.force.x += force.x
+                                        // player.force.y += force.y
+                                        player.force.x += (player.position.x > powerUp1.position.x) ? 0.02 * player.mass : - 0.02 * player.mass
+
+                                    } else {
+                                        m.energy -= 0.01
+                                        //friction
+                                        Matter.Body.setVelocity(player, {
+                                            x: player.velocity.x * 0.45,
+                                            y: player.velocity.y * 0.98
+                                        });
+                                    }
                                 }
+
                                 //draw electricity going towards player
                                 const unit = Vector.normalise(Vector.sub(m.pos, powerUp1.position))
                                 let xElec = powerUp1.position.x + 40 * unit.x;
