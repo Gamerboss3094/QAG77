@@ -1,29 +1,15 @@
-var LVinfo = '';
-var CVinfo = '';
-var LVinfoURL = 'https://raw.githubusercontent.com/Gamerboss3094/QAG77/main/version-info.json';
-var CVinfoURL = './version-info.json';
-var LV = '';
-var CV = '';
-var getLV = new XMLHttpRequest();
-getLV.open('GET', LVinfoURL, true);
-getLV.responseType = 'json';
-getLV.onload = function() {
-  if(this.status === 200) {
-    LVinfo = this.response;
-  }
+var LVinfo = {
+  "version": [
+    {
+      "major": 1,
+      "minor": 0,
+      "patch": 0,
+      "full": "1.0.0"
+    }
+  ]
 };
-var getCV = new XMLHttpRequest();
-getCV.open('GET', CVinfoURL, true);
-getCV.responseType = 'json';
-getCV.onload = function() {
-  if(this.status === 200) {
-    CVinfo = this.response;
-  }
-};
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+var CV = CVinfo.version[0];
+var LV = LVinfo.version[0];
 
 function updateAvailable() {
   if(LV.major > CV.major) {
@@ -41,37 +27,29 @@ function updateAvailable() {
   }
 }
 
-async function script() {
-  if(navigator.onLine === false) {
-    while(navigator.onLine === false) {
-      await sleep(1000);
+function updatePrompt() {
+  swal({
+    title: 'Update Available!',
+    text: 'Newest Version: ' + LV.full + '\n Current Version: ' + CV.full,
+    icon: 'warning',
+    buttons: {
+      cancel: 'Close',
+      update: {
+        text: 'Update',
+        value: 'update'
+      }
     }
-  }
-  getLV.send();
-  getCV.send();
-  while(LVinfo === '' || CVinfo === '') {
-    await sleep(5);
-  }
-  LV = LVinfo.version[0];
-  CV = CVinfo.version[0];
+  }).then((value) => {
+    if(value === 'update') {
+      location.href = 'https://github.com/Gamerboss3094/QAG77/releases/latest'
+    }
+  });
+}
+
+function update() {
   if(updateAvailable()) {
-    swal({
-      title: 'Update Available!',
-      text: 'Newest Version: ' + LV.full + '\n Current Version: ' + CV.full,
-      icon: 'warning',
-      buttons: {
-        cancel: 'Close',
-        update: {
-          text: 'Update',
-          value: 'update'
-        }
-      }
-    }).then((value) => {
-      if(value === 'update') {
-        location.href = 
-      }
-    });
+    updatePrompt();
   }
 }
 
-script();
+update();
