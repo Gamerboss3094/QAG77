@@ -7,10 +7,5 @@ This is a games website containing unblocked copies of web-based games.
 **Step 4:** Open the extracted folder  
 **Step 5:** Open index.html in your web browser  
 # Changelog  
-## [1.1.0] - 2024-03-18  
-### Added  
-- Pause on focus lost (n-gon)  
-### Changed  
-### Fixed  
 ## [1.0.0] - 2024-03-13  
 - Release
