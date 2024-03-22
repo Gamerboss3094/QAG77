@@ -1,0 +1,9 @@
+#update {
+	background-color: rgb(255, 0, 0);
+	box-shadow: 0 0 4px 4px rgb(255, 0, 0);
+}
+
+#update:hover {
+	background-color: rgb(255, 0, 0);
+	box-shadow: 0 0 6px 6px rgb(255, 0, 0);
+}

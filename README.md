@@ -6,6 +6,16 @@ This is a games website containing unblocked copies of web-based games.
 **Step 3:** Extract QAG77.zip  
 **Step 4:** Open the extracted folder  
 **Step 5:** Open index.html in your web browser  
-# Changelog  
-## [1.0.0] - 2024-03-13  
+# Changelog
+## [1.1.0] - 2024-03-22
+### Added
+- Pause on focus lost (n-gon)
+- New color scheme
+
+### Changed
+- New update system
+
+### Patched
+
+## [1.0.0] - 2024-03-13
 - Release

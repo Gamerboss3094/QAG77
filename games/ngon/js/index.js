@@ -387,7 +387,7 @@ const build = {
         }
         requestAnimationFrame(loop);
     },
-    showImages(from) { //on click event:  from all 3 different places to hide / show images 
+    showImages(from) { //on click event:  from all 3 different places to hide / show images
         localSettings.isHideImages = !localSettings.isHideImages
         if (localSettings.isAllowed) localStorage.setItem("localSettings", JSON.stringify(localSettings)); //update local storage
         if (from === 'experiment') {
@@ -464,7 +464,7 @@ const build = {
 
         let text = `<div class="pause-grid-module" style = "padding: 10px; line-height: 110%;">
 <span style = "font-size: 0.87em;">
-<span style="font-size:1.5em;font-weight: 600; float: left;">PAUSED</span> 
+<span style="font-size:1.5em;font-weight: 600; float: left;">PAUSED</span>
 <span style="float: right;">press ${input.key.pause} to resume</span>
 <br>
 <br>
@@ -487,17 +487,17 @@ ${botText}
 <br><strong class='color-h'>health</strong>: (${(m.health * 100).toFixed(0)} / ${(m.maxHealth * 100).toFixed(0)})
 <span style="float: right;">mass: ${player.mass.toFixed(1)}</span>
 <br><strong class='color-f'>energy</strong>: (${(m.energy * 100).toFixed(0)} / ${(m.maxEnergy * 100).toFixed(0)}) + (${(m.fieldRegen * 6000).toFixed(0)}/s)
-<span style="float: right;">position: (${player.position.x.toFixed(1)}, ${player.position.y.toFixed(1)})</span> 
+<span style="float: right;">position: (${player.position.x.toFixed(1)}, ${player.position.y.toFixed(1)})</span>
 <br><strong class='color-g'>gun</strong>: ${b.activeGun === null || b.activeGun === undefined ? "undefined" : b.guns[b.activeGun].name} &nbsp; <strong class='color-g'>ammo</strong>: ${b.activeGun === null || b.activeGun === undefined ? "0" : b.guns[b.activeGun].ammo}
-<span style="float: right;">mouse: (${simulation.mouseInGame.x.toFixed(1)}, ${simulation.mouseInGame.y.toFixed(1)})</span> 
+<span style="float: right;">mouse: (${simulation.mouseInGame.x.toFixed(1)}, ${simulation.mouseInGame.y.toFixed(1)})</span>
 <br><strong class='color-m'>tech</strong>: ${tech.totalCount}  &nbsp; <strong class='color-r'>research</strong>: ${powerUps.research.count}
-<span style="float: right;">velocity: (${player.velocity.x.toFixed(3)}, ${player.velocity.y.toFixed(3)})</span> 
+<span style="float: right;">velocity: (${player.velocity.x.toFixed(3)}, ${player.velocity.y.toFixed(3)})</span>
 ${tech.junkChance ? `<br><strong class='color-junk'>JUNK</strong>: ${(100 * tech.junkChance).toFixed(1)}%  ` : ""}
 <br>
 <br>level: ${level.levelsCleared} ${level.levels[level.onLevel]} (${level.difficultyText()})
 <br>mobs: ${spawn.pickList[0]},  ${spawn.pickList[0]}
 <br>seed: ${Math.initialSeed} &nbsp; ${m.cycle} cycles
-<br>mobs: ${mob.length} &nbsp; blocks: ${body.length} &nbsp; bullets: ${bullet.length} &nbsp; power ups: ${powerUp.length} 
+<br>mobs: ${mob.length} &nbsp; blocks: ${body.length} &nbsp; bullets: ${bullet.length} &nbsp; power ups: ${powerUp.length}
 ${simulation.isCheating ? "<br><br><em>lore disabled</em>" : ""}
 </span></div>`;
         // deaths: ${mobs.mobDeaths} &nbsp;
@@ -697,7 +697,7 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>" : ""}
             // build.updateExperimentText()
             document.getElementById("tech-0").scrollIntoView(); //scroll to the first tech after sorting
         } else {
-            build.generatePauseRight() //makes the right side of the pause menu with the tech            
+            build.generatePauseRight() //makes the right side of the pause menu with the tech
         }
         document.getElementById("sort-input").value = find; //make the sorted string display in the keyword search input field
         simulation.updateTechHUD();
@@ -871,7 +871,7 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>" : ""}
     },
     populateGrid() { //background-color:var(--build-bg-color);
         let text = `
-<div class="experiment-start-box">  
+<div class="experiment-start-box">
     <div class="sort" style="border: 0px;">
         <button onclick="build.sortTech('guntech', true)" class='sort-button'><strong class='color-g'>gun</strong><strong class='color-m'>tech</strong></button>
         <button onclick="build.sortTech('fieldtech', true)" class='sort-button'><strong class='color-f'>field</strong><strong class='color-m'>tech</strong></button>
@@ -998,7 +998,7 @@ ${simulation.isCheating ? "<br><br><em>lore disabled</em>" : ""}
         build.isExperimentSelection = true;
         build.isExperimentRun = true;
         simulation.paused = true;
-        b.inventory = []; //removes guns and ammo  
+        b.inventory = []; //removes guns and ammo
         for (let i = 0, len = b.guns.length; i < len; ++i) {
             b.guns[i].count = 0;
             b.guns[i].have = false;
@@ -1188,7 +1188,7 @@ const input = {
         document.getElementById("key-pause").innerHTML = cleanText(input.key.pause)
         document.getElementById("key-next-gun").innerHTML = cleanText(input.key.nextGun)
         document.getElementById("key-previous-gun").innerHTML = cleanText(input.key.previousGun)
-        document.getElementById("key-testing").innerHTML = cleanText(input.key.testing) //if (localSettings.loreCount > 0) 
+        document.getElementById("key-testing").innerHTML = cleanText(input.key.testing) //if (localSettings.loreCount > 0)
 
         document.getElementById("splash-up").innerHTML = cleanText(input.key.up)[0]
         document.getElementById("splash-down").innerHTML = cleanText(input.key.down)[0]
@@ -1443,7 +1443,7 @@ window.addEventListener("keydown", function (event) {
                             <tr>
                                 <td class='key-input-pause'>G</td>
                                 <td class='key-used'>all guns</td>
-                            </tr>                            
+                            </tr>
                             <tr>
                                 <td class='key-input-pause'>H</td>
                                 <td class='key-used'>+100% defense</td>
@@ -1479,7 +1479,7 @@ window.addEventListener("keydown", function (event) {
                             <tr>
                                 <td class='key-input-pause'>⇧X</td>
                                 <td class='key-used'>restart</td>
-                            </tr>    
+                            </tr>
                         </table>`, Infinity);
                 }
             }
@@ -1821,7 +1821,7 @@ document.getElementById("control-testing").style.visibility = (localSettings.lor
 input.controlTextUpdate()
 
 //**********************************************************************
-// settings 
+// settings
 //**********************************************************************
 document.getElementById("fps-select").addEventListener("input", () => {
     let value = document.getElementById("fps-select").value
@@ -1981,7 +1981,7 @@ if (!localSettings.isHideImages) {
 
 
 //**********************************************************************
-// main loop 
+// main loop
 //**********************************************************************
 simulation.loop = simulation.normalLoop;
 

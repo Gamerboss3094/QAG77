@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/Tnav.css" />
+    <link id="updateCSS" rel="stylesheet"/>
   </head>
   <body>
     <div class="Tnav">
@@ -13,9 +13,8 @@
       <button class="Tbtn Tin" data-url="games/slope/index.html">Slope</button>
       <button class="Tbtn Tin" data-url="games/pacman/index.html">Pacman</button>
       <button class="Tbtn Tin" data-url="games/planetesimals/index.html">Planetesimals</button>
+      <span id="update"><span id='updClickArea'></span></span>
     </div>
-    <div>&nbsp;</div>
-    <p>&nbsp;</p>
     <span id="embedArea">
       <embed id="embed" src="games/ngon/index.html" />
       <br />
@@ -30,13 +29,14 @@
         "version": [
           {
             "major": 1,
-            "minor": 0,
+            "minor": 2,
             "patch": 0,
-            "full": "1.0.0"
+            "full": "1.1.0"
           }
         ]
       };
     </script>
-    <script src="https://gamerboss3094.github.io/qag77/updater.js"></script>
+    <script src="https://gamerboss3094.github.io/qag77/getVer.js"></script>
+    <script src="scripts/updater.js"></script>
   </body>
 </html>
