@@ -7,7 +7,7 @@ This is a games website containing unblocked copies of web-based games.
 **Step 4:** Open the extracted folder  
 **Step 5:** Open index.html in your web browser  
 # Changelog
-## [1.2.0] - 2024-03-22
+## [1.2.0] - 2024-03-25
 ### Added
 - added gameMods folder
 - Added link to repository
