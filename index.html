@@ -15,12 +15,21 @@
       <button class="Tbtn Tin" data-url="games/planetesimals/index.html">Planetesimals</button>
       <span id="update"><span id='updClickArea'></span></span>
     </div>
-    <span id="embedArea">
-      <embed id="embed" src="games/ngon/index.html" />
-      <br />
-      <span id="embedBar">
-        <img id="fullscreen" onclick="document.getElementById('embed').requestFullscreen();" src="img/fullscreen.png" width="30px" />
-      </span>
+    <span id="embedPosition">
+      <span id="embedArea">
+      	<embed id="embed" src="games/ngon/index.html" />
+      	<br />
+      	<span id="embedBarPosition">
+      		<span id="embedBar">
+      			<span id='reposPosition'>
+      				<a href='https://github.com/Gamerboss3094/QAG77/' id='repos'>
+      					<img src='img/github.png' width="30px" />&nbsp;<label>QAG77</label>
+      				</a>
+      			</span>
+      	  	<img id="fullscreen" onclick="document.getElementById('embed').requestFullscreen();" src="img/fullscreen.png" width="30px" />
+      		</span>
+      	</span>
+    	</span>
     </span>
     <script src="scripts/Tnav.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -29,9 +38,9 @@
         "version": [
           {
             "major": 1,
-            "minor": 1,
+            "minor": 2,
             "patch": 0,
-            "full": "1.1.0"
+            "full": "1.2.0"
           }
         ]
       };

@@ -1,34 +1,19 @@
 ******************************************************** NEXT PATCH **************************************************
 
-new tech are sorted to the top of the tech list
-  pause menu tech list matches the tech list in game
-JUNK tech icons are properly displayed in pause
-Sort interface works with enter key
-bug fix: you can no longer pause or enter testing in experiment selection on text input
-pressing P in power up selection menu brings up the pause menu
-  so you can see your tech and stats
-blocks stuck in vertical portals have a bit of randomness added to their velocity to help them escape
+text rework
+  most numbers converted from "+50%" to "1.5x"
+  renamed defense -> damage taken
+  adjusted about 20 tech to round down or up their values to less decimals
+    for a few I added research cost or JUNK chance to balance rounding
 
-JUNK tech chance is a raw percent chance to display a random JUNK
-  it was previously a specific JUNK tech directly added to the pool
-  this might cause bugs
-JUNK tech: beforeunload - asks if you want to cancel if you exit game, if you cancel gain 25% damage, but there is a 25% chance to exit anyways
-JUNK tech: what the block? - trying to throw a block, throws you instead
-reinforcement learning converted into a JUNK tech
-JUNK DNA - scale damage by 100->200% of JUNK pool tech percent
-dark patterns 33->22% JUNK
-replication 33->22% JUNK
-
-overcharge 66->88 max energy
-residual dipolar coupling 6->8 coupling per cancel
-futures exchange 4.7->5% duplication per cancel
-hyperpolarization reduces polarization time by 1->1.25 seconds
-reel +75->100 energy
-
-updated physics engine to matter.js 0.19 (from 0.18)
+new community map soft by Richard0820
+tech: peer review - gain +damage each time you research
+self-assembly scales with health not health percent
+matter.js engine reverted back to 0.18 (to fix an issue with time dilation)
 
 *********************************************************** TODO *****************************************************
 
+tech - destroys a random tech each new level and gains +damage each time
 
 List of ways to break the game
   CPT + high energy regen
@@ -1110,7 +1095,6 @@ possible names for tech
   holographic - 2-D surface can predict the 3-D space behind it?  I think
   hypergolic - A hypergolic propellant combination used in a rocket engine is one whose components spontaneously ignite when they come into contact with each other.
   swarm intelligence - for a drone tech
-  genetic algorithm
   metaheuristic - is a higher-level procedure or heuristic designed to find, generate, or select a heuristic (partial search algorithm) that may provide a sufficiently good solution to an optimization problem, especially with incomplete or imperfect information or limited computation capacity
   stochastic optimization
   electrostatic discharge
